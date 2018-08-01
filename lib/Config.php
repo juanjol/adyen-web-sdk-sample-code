@@ -21,8 +21,8 @@
  */
 class Config
 {
-    const ENDPOINT_TEST = "https://checkout-test.adyen.com/services/PaymentSetupAndVerification";
-    const VERSION = "/v37";
+    const ENDPOINT_TEST = "https://checkout-test.adyen.com/checkout";
+    const VERSION = "/v32";
     const PAYMENTSESSION = "/paymentSession";
     const PAYMENTSRESULT = "/payments/result";
 
@@ -52,7 +52,7 @@ class Config
 
     public static function getReturnUrl()
     {
-        return self::url();
+        return 'http://tienda.aecc.docker:8000';
     }
 
     public static function getPaymentSessionUrl()
